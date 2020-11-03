@@ -1,0 +1,26 @@
+{
+  "name": "@chustasoft/cs-common",
+  "version": "1.0.0",
+  "description": "Common utilities for JavaScript projects equivalents to ChustaSoft CommonNET project",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -project tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChustaSoft/CommonNET.git"
+  },
+  "keywords": [
+    "chustasoft", "common", "utilities"
+  ],
+  "author": "ChustaSoft",
+  "license": "GPL-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  }
+}

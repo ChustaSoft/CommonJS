@@ -3,7 +3,7 @@
 
 Common utilities and features for any JS application. Developed in TypeScript, can be used in any kind of Javascript project
 
-[![Build Status](https://dev.azure.com/chustasoft/SocialNET/_apis/build/status/Release/Common/%5BRELEASE%5D%20-%20ChustaSoft%20cs-common%20(npm)?branchName=master)](https://dev.azure.com/chustasoft/SocialNET/_build/latest?definitionId=28&branchName=master) ![npm](https://img.shields.io/npm/v/@chustasoft/cs-common) [![downloads](https://img.shields.io/npm/dt/@chustasoft/cs-common.svg)](https://www.npmjs.com/package/@chustasoft/cs-common)
+[![Build Status](https://dev.azure.com/chustasoft/SocialNET/_apis/build/status/OpenStack/Common/%5BRELEASE%5D%20-%20ChustaSoft%20cs-common%20(npm)?repoName=ChustaSoft%2FCommonJS&branchName=master)](https://dev.azure.com/chustasoft/SocialNET/_build/latest?definitionId=28&repoName=ChustaSoft%2FCommonJS&branchName=master) ![npm](https://img.shields.io/npm/v/@chustasoft/cs-common) [![downloads](https://img.shields.io/npm/dt/@chustasoft/cs-common.svg)](https://www.npmjs.com/package/@chustasoft/cs-common)
 
 
 ### Getting started

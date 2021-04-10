@@ -1,26 +1,34 @@
 {
   "name": "@chustasoft/cs-common",
-  "version": "1.0.0",
+  "version": "1.2.0-beta.1",
   "description": "Common utilities for JavaScript projects equivalents to ChustaSoft CommonNET project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -project tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc ./node_modules/.bin/_mocha 'tests/**/*.ts'"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChustaSoft/CommonNET.git"
+    "url": "https://github.com/ChustaSoft/CommonJS.git"
   },
   "keywords": [
-    "chustasoft", "common", "utilities"
+    "chustasoft",
+    "common",
+    "utilities"
   ],
   "author": "ChustaSoft",
-  "license": "GPL-2.0",
+  "license": "GPL-3.0",
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
+    "@testdeck/mocha": "^0.1.2",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "ts-mockito": "^2.6.1",
+    "ts-node": "^9.0.0",
     "typescript": "^2.9.2"
   }
 }

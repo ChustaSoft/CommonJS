@@ -11,6 +11,15 @@ Common utilities and features for any JS application. Developed in TypeScript, c
 
 There are no dependencies, just install in the project to use and it will be ready. 
 
+The library is just provinding a few elements useful in any kind of project
+
+- **ActionResponse<T>:** Provides an unified mechanims of data in any kind of project. (Equivalent of CommonNET one)
+- **HttpService:** Service for Htpp generic calls using pure TypeScript and returning Promises
+- **Array<T> Extensions:** Providing extensions for Arrays such as:
+  - orderBy: Sort elements, selecting the property, by default ascending, but last paramter (optional) allow to select between Asc and Desc sorting
+  - remove: Delete an element inside an array
+
+
 
 *Thanks for using and contributing*
 ---

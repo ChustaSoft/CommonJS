@@ -1,26 +1,26 @@
-import { ActionResponse, BasicAuthentication } from "..";
+import { ActionResponse, BasicAuthentication, JwtAuthentication } from "..";
 import { HttpHeadersBuilder } from "../helpers/http-headers.builder";
 
 export class HttpService {
 
-    public async get<TRespose>(url: string, authData: string | BasicAuthentication = null): Promise<TRespose> {
+    public async get<TRespose>(url: string, authData: JwtAuthentication | BasicAuthentication = null): Promise<TRespose> {
         return this.performUrlCall<TRespose>('GET', url, authData);
     }
 
-    public async post<TBody, TRespose>(url: string, body: TBody, authData: string | BasicAuthentication = null): Promise<TRespose> {
+    public async post<TBody, TRespose>(url: string, body: TBody, authData: JwtAuthentication | BasicAuthentication = null): Promise<TRespose> {
         return this.performBodyCall<TBody, TRespose>('POST', url, body, authData);
     }
 
-    public async put<TBody, TRespose>(url: string, body: TBody, authData: string | BasicAuthentication = null): Promise<TRespose> {
+    public async put<TBody, TRespose>(url: string, body: TBody, authData: JwtAuthentication | BasicAuthentication = null): Promise<TRespose> {
         return this.performBodyCall<TBody, TRespose>('PUT', url, body, authData);
     }
 
-    public async delete<TResponse>(url: string, authData: string | BasicAuthentication = null): Promise<TResponse> {
+    public async delete<TResponse>(url: string, authData: JwtAuthentication | BasicAuthentication = null): Promise<TResponse> {
         return this.performUrlCall<TResponse>('DELETE', url, authData);
     }
 
 
-    private performUrlCall<TRespose>(action: string, url: string, authData: string | BasicAuthentication = null): TRespose | PromiseLike<TRespose> {
+    private performUrlCall<TRespose>(action: string, url: string, authData: JwtAuthentication | BasicAuthentication = null): TRespose | PromiseLike<TRespose> {
         return fetch(url, {
             method: action,
             headers: new HttpHeadersBuilder().setAuthentication(authData).build()})
@@ -35,7 +35,7 @@ export class HttpService {
             });
     }
     
-    private performBodyCall<TBody, TRespose>(action: string, url: string, body: TBody, authData: string | BasicAuthentication = null): TRespose | PromiseLike<TRespose> {
+    private performBodyCall<TBody, TRespose>(action: string, url: string, body: TBody, authData: JwtAuthentication | BasicAuthentication = null): TRespose | PromiseLike<TRespose> {
         return fetch(url, {
             method: action,
             body: JSON.stringify(body),

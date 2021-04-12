@@ -1,4 +1,4 @@
-import { BasicAuthentication, Builder } from "..";
+import { JwtAuthentication, BasicAuthentication, Builder } from "..";
 
 export class HttpHeadersBuilder implements Builder<HeadersInit> {
 
@@ -13,11 +13,11 @@ export class HttpHeadersBuilder implements Builder<HeadersInit> {
     }
     
 
-    public setAuthentication(authData: string | BasicAuthentication): HttpHeadersBuilder {
-        if (typeof authData === 'string') { 
-            Object.assign(this.headers, { Authorization: `Bearer ${authData}` });     
+    public setAuthentication(authData: JwtAuthentication | BasicAuthentication): HttpHeadersBuilder {
+        if(authData instanceof JwtAuthentication){
+            Object.assign(this.headers, { Authorization: `Bearer ${authData.token}` });     
         }
-        else if(authData instanceof BasicAuthentication){
+        else if(authData instanceof BasicAuthentication) {
             Object.assign(this.headers, { Authorization: `Basic ${window.btoa(authData.username + ':' + authData.password)}` });
         }       
 

@@ -1,3 +1,3 @@
-export declare class JwtAuthentication {
+export class JwtAuthentication {
     token: string;
 }

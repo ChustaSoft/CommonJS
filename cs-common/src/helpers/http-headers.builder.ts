@@ -18,7 +18,7 @@ export class HttpHeadersBuilder implements Builder<HeadersInit> {
             Object.assign(this.headers, { Authorization: `Bearer ${authData.token}` });     
         }
         else if(authData instanceof BasicAuthentication) {
-            Object.assign(this.headers, { Authorization: `Basic ${window.btoa(authData.username + ':' + authData.password)}` });
+            Object.assign(this.headers, { Authorization: `Basic ${btoa(authData.username + ':' + authData.password)}` });
         }       
 
         return this;
